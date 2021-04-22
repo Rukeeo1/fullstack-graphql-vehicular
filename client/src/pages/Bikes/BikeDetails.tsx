@@ -1,9 +1,7 @@
-import React from 'react'
-
 const BikeDetails = () => {
   return (
     <div>
-      Hello boo bike details 
+      This page would have been to get bike by id
     </div>
   )
 }
