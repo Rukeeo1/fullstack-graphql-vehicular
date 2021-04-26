@@ -37,7 +37,6 @@ export const AppContextProvider = ({ children }: AppContextProviderType) => {
   useEffect(() => {
     const userInfo = localStorage.getItem('AUTH_INFO');
     if (userInfo) {
-      console.group(JSON.parse(userInfo), 'context');
       const { email, name } = JSON.parse(userInfo);
       setUserDetails((prevState) => ({
         ...prevState,

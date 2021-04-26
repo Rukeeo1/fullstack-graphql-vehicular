@@ -20,6 +20,7 @@ const NavBar = () => {
     window.location.href = '/';
   };
 
+
   return (
     <AppBarElement>
       <ToolbarElement>
@@ -28,7 +29,7 @@ const NavBar = () => {
           {appContext.data?.userDetails?.isAuthenticated && <AccountCircle />}
           <NavBarItem>
             <TypographyItem>
-              {appContext.data?.userDetails?.name}
+              {appContext.data?.userDetails?.email}
             </TypographyItem>
           </NavBarItem>
           <NavBarItem onClick={logoutUser}>

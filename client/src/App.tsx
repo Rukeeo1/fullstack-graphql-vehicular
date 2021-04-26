@@ -9,7 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import { AppContextProvider } from 'context/';
-import { Navbar, PrivateRoute, LazyLoader } from 'components/index';
+import { Navbar, PrivateRoute, LazyLoader, NotFound } from 'components/index';
 
 import { privateRoutes, publicRoutes } from './routes';
 
@@ -69,6 +69,7 @@ function App() {
                         exact
                       />
                     ))}
+                    <Route component={NotFound} />
                   </Switch>
                 </main>
               </>

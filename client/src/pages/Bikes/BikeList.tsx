@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useQuery, useLazyQuery } from '@apollo/client';
 import { DataGrid } from '@material-ui/data-grid';
-import { useHistory } from 'react-router-dom';
 import { DebounceInput } from 'react-debounce-input';
 
 import { GET_VEHICLES_QUERY, SEARCH_VEHICLES } from 'graphql/queries';
@@ -21,7 +20,6 @@ export type VehicleType = {
 
 const BikeList = () => {
   const [vehicleData, setVehicleData] = useState<VehicleType[]>([]);
-  const history = useHistory();
 
   const { loading, data } = useQuery(GET_VEHICLES_QUERY, {
     onError(err) {
@@ -71,7 +69,9 @@ const BikeList = () => {
       headerName: 'Vehicle Status',
       width: 250,
       valueGetter: (params: any) => {
-        return params?.row.is_disabled && params?.row.is_reserved ? 'Not Available' : 'AVailable';
+        return params?.row.is_disabled && params?.row.is_reserved
+          ? 'Not Available'
+          : 'Available';
       },
     },
   ];
@@ -100,7 +100,6 @@ const BikeList = () => {
           pageSize={numberOfVisibleRows}
           loading={loading || searching}
           getRowId={(row) => row.bike_id}
-          onRowClick={(row) => history.push(`/bikes/${row.id}`)}
         />
       </TableContainer>
     </PageContainter>
