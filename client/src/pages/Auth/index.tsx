@@ -38,6 +38,12 @@ const Auth = () => {
   const appContext = useContext(AppContext);
   const history = useHistory();
 
+  const authDetails = localStorage.getItem('AUTH_INFO');
+
+  if (authDetails) {
+    history.push('/bikes');
+  }
+
   const [signUp, { loading }] = useMutation(SIGNUP_MUTATION, {
     onError(err) {
       alert(JSON.stringify(err.message));

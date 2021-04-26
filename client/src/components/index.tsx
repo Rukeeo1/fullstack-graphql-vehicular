@@ -3,3 +3,4 @@ export { default as Input } from 'components/TextInput';
 export { default as Button } from 'components/Button';
 export { default as PrivateRoute } from 'components/PrivateRoute';
 export {default as LazyLoader } from 'components/LazyLoader'
+export {default as NotFound} from 'components/NotFound'

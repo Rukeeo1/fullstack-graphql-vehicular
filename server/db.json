@@ -115,6 +115,12 @@
       "name": "",
       "password": "$2a$10$k0nERP8j5rGJs53uDYbkPeOUAzHW.wGWmeOMY9LuZWCMJui141pHO",
       "id": 18
+    },
+    {
+      "email": "rukee@willi.com",
+      "name": "Willochs",
+      "password": "$2a$10$816FcX.vx5zQujpAMvGQkev4lnOTLMsSWqaFzUtcMNMlodyO8UTr2",
+      "id": 19
     }
   ],
   "profile": {
